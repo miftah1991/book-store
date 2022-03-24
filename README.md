@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Math-Magicians Link](https://miftah1991.github.io/book-store/)
+[Book Store Link](https://miftah1991.github.io/book-store/)
 
 ## Getting Started
 

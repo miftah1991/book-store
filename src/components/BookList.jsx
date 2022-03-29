@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
 const BookList = () => {
@@ -22,11 +23,12 @@ const BookList = () => {
       category: 'Computer',
     },
   ];
+  const books = useSelector((state) => state.booksReducer);
 
   return (
     <div>
       <ul>
-        {DUMMYDATA.map((book) => (
+      {[...DUMMYDATA, ...books].map((book) => (
           <BookItem
             key={book.id}
             title={book.title}

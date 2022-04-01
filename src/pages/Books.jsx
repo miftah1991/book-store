@@ -3,12 +3,10 @@ import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
 
 const Books = () => {
-  return (
-    <>
-      <BookList />
-      <AddBook />
-    </>
-  );
+  <>
+    <BookList />
+    <AddBook />
+  </>;
 };
 
 export default Books;

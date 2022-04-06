@@ -32,6 +32,7 @@ export const getAllBooks = () => async (dispatch) => {
     books.push({
       item_id: id,
       title: bookList[id][0].title,
+      author: bookList[id][0].author,
       category: bookList[id][0].category,
     });
   });

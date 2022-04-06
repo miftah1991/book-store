@@ -7,6 +7,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
   const submitBookToStore = (e) => {
@@ -14,6 +15,7 @@ const AddBook = () => {
     const newBook = {
       item_id: uuidv4(),
       title,
+      author,
       category,
     };
 
@@ -21,10 +23,12 @@ const AddBook = () => {
 
     // Clear Form Inputs
     setTitle('');
+    setAuthor('');
   };
   return (
     <form>
       <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+      <input type="text" placeholder="Author Name" value={author} onChange={(e) => setAuthor(e.target.value)} required />
       <select name="categories" id="category" onChange={(e) => setCategory(e.target.value)}>
         <option value="action">Action</option>
         <option value="science">Science Fiction</option>

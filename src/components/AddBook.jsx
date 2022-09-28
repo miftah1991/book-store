@@ -13,6 +13,10 @@ const AddBook = () => {
 
   const submitBookToStore = (e) => {
     e.preventDefault();
+    if (category === '') {
+      alert('please select cateogry');
+      return;
+    }
     const newBook = {
       item_id: uuidv4(),
       title,
@@ -25,6 +29,7 @@ const AddBook = () => {
     // Clear Form Inputs
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
   return (
     <section className="form-section">
@@ -33,13 +38,14 @@ const AddBook = () => {
         <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
         <input type="text" placeholder="Author Name" value={author} onChange={(e) => setAuthor(e.target.value)} required />
         <select name="categories" id="category" onChange={(e) => setCategory(e.target.value)}>
+          <option value="">please select</option>
           <option value="action">Action</option>
           <option value="science">Science</option>
           <option value="economy">Economy</option>
           <option value="technology">Technology</option>
           <option value="games">Games</option>
         </select>
-        <button className="add-btn" type="submit">Add Book</button>
+        <button className="add-btn" type="submit">Add Book to store</button>
       </form>
     </section>
   );

@@ -3,6 +3,7 @@
 # Book Store
 
 > Book Store is a SPA web app for mathematics which allow users to do add and remove books in a booklist using react and redux.
+>This project is very great demo for exploring redux project
 
 <img src="https://github.com/miftah1991/book-store/blob/styling/src/imgs/screenshot.png" width="30%" />
 
